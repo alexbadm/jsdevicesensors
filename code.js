@@ -58,7 +58,7 @@ var axisFields = [ 'x', 'y', 'z' ]
 var rotationFields = [ 'alpha', 'beta', 'gamma' ]
 
 function devicemotionHtml (counter, event) {
-  return `${counter}: ${event.toString()}
+  return `${counter}: ${event.type}
     <br />
     <strong>acceleration</strong>
     ${axisFields.map(field => `<br />${field}: ${event.acceleration[field]}`)}
